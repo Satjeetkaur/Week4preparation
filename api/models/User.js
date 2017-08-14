@@ -8,7 +8,35 @@
 module.exports = {
 
   attributes: {
+ 
+	title:
+	{
+	type: 'string',
+	required: true
+	},
 
-  }
+	releasedate: {
+	type:'string',
+	required: true
+	},
+
+	Duration:
+	{
+		type: 'string',
+		required: true
+	},
+
+	Genre:
+	{
+		type: 'string',
+		required: true
+	},
+	Synopsis:
+	{
+		type: 'string',
+		required: true
+	}
+
+	}
 };
 
