@@ -1,0 +1,20 @@
+<div class='container'>
+	<table class="table">
+	<tr>
+		<th> Category Id </th>
+		<th> Category Name </th>
+	</tr>
+
+	<% _.each(users, function(user){ %>
+	<tr data-id = "<%= user.cid  %>" data-model="user">
+
+	<td><%= user.cid %></td>
+	<td><%= user.cname %></td>
+	<td><a href="/Category/viewrec/<%= user.cid %>" class="btn btn-sm btn-primary">View</a></td>
+	<td><a href="/Category/edit/<%= user.cid %>" class="btn btn-sm btn-warning">Edit</a></td>
+	<td><a href="/Category/delete/<%= user.cid %>" class="btn btn-sm btn-danger">Delete</a></td>
+</tr>
+	<% }) %>
+	</table>
+	
+</div>

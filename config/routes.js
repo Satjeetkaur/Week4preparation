@@ -36,7 +36,12 @@ module.exports.routes = {
     view: 'static/index'
 
 
-  }
+  },
+
+  '/about': {
+    controller: 'AboutController',
+    action: 'index'
+}
 
   /***************************************************************************
   *                                                                          *
