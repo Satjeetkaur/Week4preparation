@@ -1,4 +1,4 @@
-//Validation Category.js Page
+//Variable creation Category.js Page
 
 module.exports = {
 

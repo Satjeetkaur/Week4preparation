@@ -1,4 +1,4 @@
-//Validation for Items Page
+//Variable creation Page
 module.exports = {
 
   attributes: {
