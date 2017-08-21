@@ -7,54 +7,55 @@
 
 module.exports = {
 
+
+	// this method for call Items/index.ejs
 	'index':function(req, res)
 	{
 		res.view();
 	},
 
-
+	// this method for Save records
 	'saverec' :function(req, res, next)
 	{
 		Items.create(req.params.all(), function userCreated(err, user){
 			if(err) return next(err);
-			//res.json(user);
-res.view();
-			//res.redirect('/Items/show/?cid='+ user.cid);
+			
+			res.view();
+			
 		});
 	},
 
+
+	// this method for Display all record in Items/show
 	'show': function(req, res, next){
 		Items.find(function foundUser(err, users){
 			if (err) return next(err);
 			if (!users) return next();
 
-			//res.json(user);
-
 			res.view({ 
 				users: users
 			});
-			
-			 //sails.log('Wow, there are %d users named Finn.  Check it out:', users.length, users);
  
 		});
 	},
 
+
+	// this method for find record on given id in Items/viewrec
 	'viewrec': function(req, res, next){
 		Items.findOne(req.param('id'), function foundUser(err, user){
 			if (err) return next(err);
 			if (!user) return next();
 
-			//res.json(user);
-
 			res.view({ 
 				user: user
 			});
-			
-			// sails.log('Wow, there are %d users named Finn.  Check it out:', user.length, user);
  
 		});
 	},
 
+
+
+	// this method for delete record on given id in Items/deleterec
 	'deleterec': function(req, res, next){
 
 		Items.destroy(req.param('id')).exec(function (err){
