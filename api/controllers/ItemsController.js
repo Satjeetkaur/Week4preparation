@@ -1,7 +1,7 @@
 /**
- * CategoryController
+ * ItemsController
  *
- * @description :: Server-side logic for managing Categories
+ * @description :: Server-side logic for managing Items
  * @help        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
  */
 
@@ -15,16 +15,16 @@ module.exports = {
 
 	create :function(req, res, next)
 	{
-		Category.create(req.params.all(), function userCreated(err, user){
+		Items.create(req.params.all(), function userCreated(err, user){
 			if(err) return next(err);
-			//res.json(user);
+			res.json(user);
 
-			res.redirect('/Category/show/?cid='+ user.cid);
+			//res.redirect('/Items/show/?cid='+ user.cid);
 		});
 	},
 
 	'show': function(req, res, next){
-		Category.find(function foundUser(err, users){
+		Items.find(function foundUser(err, users){
 			if (err) return next(err);
 			if (!users) return next();
 
@@ -40,7 +40,7 @@ module.exports = {
 	},
 
 	'viewrec': function(req, res, next){
-		Category.findOne(req.param('id'), function foundUser(err, user){
+		Items.findOne(req.param('id'), function foundUser(err, user){
 			if (err) return next(err);
 			if (!user) return next();
 
@@ -57,7 +57,7 @@ module.exports = {
 
 	'deleterec': function(req, res, next){
 
-		Category.destroy(req.param('cid')).exec(function (err){
+		Items.destroy(req.param('id')).exec(function (err){
   				if (err) {
     				return res.negotiate(err);
   					}
@@ -65,5 +65,6 @@ module.exports = {
  				    return res.ok();
 		});
 	}
+
 };
 

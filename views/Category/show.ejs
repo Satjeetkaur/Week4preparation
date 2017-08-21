@@ -10,9 +10,9 @@
 
 	<td><%= user.cid %></td>
 	<td><%= user.cname %></td>
-	<td><a href="/Category/viewrec/<%= user.cid %>" class="btn btn-sm btn-primary">View</a></td>
+	<td><a href="/Category/viewrec/<%= user.id %>" name="view" class="btn btn-sm btn-primary">View</a></td>
 	<td><a href="/Category/edit/<%= user.cid %>" class="btn btn-sm btn-warning">Edit</a></td>
-	<td><a href="/Category/delete/<%= user.cid %>" class="btn btn-sm btn-danger">Delete</a></td>
+	<td><a href="/Category/deleterec/<%= user.id %>" class="btn btn-sm btn-danger">Delete</a></td>
 </tr>
 	<% }) %>
 	</table>

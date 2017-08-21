@@ -1,0 +1,31 @@
+<div class='container'>
+	<table class="table">
+	<tr>
+		<th> Item Id </th>
+		<th> Item Name </th>
+		<th> Brand Name </th>
+		<th> Price </th>
+		<th> Color Name </th>
+		<th> Quantity </th>
+	</tr>
+
+	<% _.each(users, function(user){ %>
+	<tr data-id = "<%= user.id  %>" data-model="user">
+
+	<td><%= user.id %></td>
+	<td><%= user.Itemname %></td>
+	<td><%= user.Brandname %></td>
+	<td><%= user.Price %></td>
+	<td><%= user.ColorName %></td>
+	<td><%= user.Qty%></td>
+
+
+
+	<td><a href="/Items/viewrec/<%= user.id %>" name="viewrec" class="btn btn-sm btn-primary">View</a></td>
+	<td><a href="/Items/edit/<%= user.id %>" class="btn btn-sm btn-warning">Edit</a></td>
+	<td><a href="/Items/deleterec/<%= user.id %>" class="btn btn-sm btn-danger">Delete</a></td>
+</tr>
+	<% }) %>
+	</table>
+	
+</div>
