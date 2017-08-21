@@ -1,61 +1,47 @@
 <!-- Default home page -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600' rel='stylesheet' type='text/css'>
-
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600' rel='stylesheet' type='text/css'>
 
 <ul class="getting-started">
+
+    <form action="/Items/saverec" method="POST">
     
-  <form action="/Items/saverec" method="POST">
-  
-  <div class="form-group">
-    <label for="Items Name">Item Name:</label>
-    <input type="text" class="form-control" id="Itemname" name="Itemname">
-  </div>
-
-  <div class="form-group">
-    <label for="Brand Name">Brand Name:</label>
-    <input type="text" class="form-control" id="Brandname" name="Brandname">
-  </div>
-  
-  <div class="form-group">
-    <label for="Price">Price $:</label>
-    <input type="text" class="form-control" id="Price" name="Price">
-  </div>
-
-  <div class="form-group">
-    <label for="Color Name">Color Name </label>
-    <input type="text" class="form-control" id="ColorName" name="ColorName">
-  </div>
-
-  <div class="form-group">
-    <label for="Qty">Quantity </label>
-    <input type="text" class="form-control" id="qty" name="Qty">
-  </div>
-
-  <input type="submit" class="btn btn-default" value="SAVE"/>
-  <input type="hidden" name="_csrf" value="<%= _csrf%>" />
-</form>
-
-
-<form action="/Items/show" method="POST">
- 
-  <input type="submit" class="btn btn-default" value="Display all records"/>
-  <input type="hidden" name="_csrf" value="<%= _csrf%>" />
-</form>
-          </p>
+        <div class="form-group">
+          <label for="Items Name">Item Name:</label>
+          <input type="text" class="form-control" id="Itemname" name="Itemname">
         </div>
-      </li>
+
+        <div class="form-group">
+          <label for="Brand Name">Brand Name:</label>
+          <input type="text" class="form-control" id="Brandname" name="Brandname">
+        </div>
       
-      
-    </ul>
+        <div class="form-group">
+          <label for="Price">Price $:</label>
+          <input type="text" class="form-control" id="Price" name="Price">
+        </div>
 
+        <div class="form-group">
+          <label for="Color Name">Color Name </label>
+          <input type="text" class="form-control" id="ColorName" name="ColorName">
+        </div>
 
+        <div class="form-group">
+          <label for="Qty">Quantity </label>
+          <input type="text" class="form-control" id="qty" name="Qty">
+        </div>
 
+        <input type="submit" class="btn btn-default" value="SAVE"/>
+        <input type="hidden" name="_csrf" value="<%= _csrf%>" />
+    </form>
+    <form action="/Items/show" method="POST">
+      <input type="submit" class="btn btn-default" value="Display all records"/>
+      <input type="hidden" name="_csrf" value="<%= _csrf%>" />
+    </form>
 
-
-
-
+  </ul>
+  
 </div>
                                                     
