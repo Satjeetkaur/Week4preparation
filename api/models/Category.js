@@ -1,4 +1,4 @@
-//Validation for Items Page
+//Validation Category.js Page
 
 module.exports = {
 
