@@ -13,12 +13,12 @@ module.exports = {
 	},
 
 
-	create :function(req, res, next)
+	'saverec' :function(req, res, next)
 	{
 		Items.create(req.params.all(), function userCreated(err, user){
 			if(err) return next(err);
-			res.json(user);
-
+			//res.json(user);
+res.view();
 			//res.redirect('/Items/show/?cid='+ user.cid);
 		});
 	},
