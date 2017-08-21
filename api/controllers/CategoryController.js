@@ -61,7 +61,7 @@ module.exports = {
   				if (err) {
     				return res.negotiate(err);
   					}
-  						sails.log('record have now been deleted, succesfully');
+  						sails.log('record have now been succesfully Deleted');
  				    return res.ok();
 		});
 	}
